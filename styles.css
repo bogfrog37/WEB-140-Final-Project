@@ -22,20 +22,6 @@ body {
   margin-top: 20px;
 }
 
-.title-container {
-  display: flex;
-  justify-content: space-between; /* Pushes title and button to opposite sides */
-  align-items: center; /* Vertically aligns title and button */
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-img {
-  width: 300px;
-  height: 200px;
-  margin: auto;
-}
-
 /* Sidebar styles */
 .side-nav {
   position: fixed;
@@ -72,21 +58,20 @@ img {
   transition: margin-left 0.5s ease; /* Smooth shift of content */
 }
 
-/* Content shifted when sidebar is open */
 .content.shifted {
   margin-left: 250px; /* Shift the content when the sidebar is open */
 }
 
-/* Hamburger Button (Under the Title) */
+/* Hamburger Button */
 .hamburger-btn {
   position: absolute;
-  left: 0px; /* Aligns the button to the right */
+  left: 0px;
   top: 1px;
   background-color: transparent;
   border: none;
   padding: 10px;
   cursor: pointer;
-  z-index: 1050; /* Ensure it's on top */
+  z-index: 1050;
 }
 
 .hamburger-btn span {
@@ -127,9 +112,4 @@ img {
   background-color: #005f73;
   z-index: 9999;
   left: 0;
-}
-
-/* Paragraph Styling (in case you need to apply adjustments) */
-p {
-  left: 4px;
 }
