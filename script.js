@@ -1,16 +1,15 @@
 function toggleSidebar() {
-  const $sideNav = $('#sideNav'); // Select the side navigation element
-  const $mainContent = $('#mainContent'); // Select the main content element
-  const isSidebarOpen = $sideNav.css('left') === '0px'; // Check if the sidebar is open
+    // If sidebar is open, close it; if it's closed, open it
+    $('#sideNav').toggleClass('open');
+    $('.content').toggleClass('shifted'); // Move content when sidebar is open
+  }
 
-  if (isSidebarOpen) {
-    $sideNav.css('left', '-250px'); // Close sidebar
-    $mainContent.css('margin-left', '0'); // Reset content margin
-  } else {
-    $sideNav.css('left', '0'); // Open sidebar
-    $mainContent.css('margin-left', '250px'); // Push content to the right
+  // Attach toggleSidebar function to hamburger button click event
+  $('.hamburger-btn').click(function() {
+    toggleSidebar();
   }
 }
+                      
 
 
     $(document).ready(function() {
