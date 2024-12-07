@@ -1,8 +1,6 @@
 $(document).ready(function() {
-
   // Function to toggle the sidebar visibility
   function toggleSidebar() {
-    // If sidebar is open, close it; if it's closed, open it
     $('#sideNav').toggleClass('open');
     $('.content').toggleClass('shifted'); // Move content when sidebar is open
   }
@@ -23,13 +21,6 @@ $(document).ready(function() {
 
   // Set the interval to switch images every 3 seconds (3000 milliseconds)
   setInterval(switchImage, 3000);
-
-  // Change Link Color on Hover
-  $('.link').hover(function () {
-    $(this).css('color', '#005f73');
-  }, function () {
-    $(this).css('color', ''); // Reset the color when hover ends
-  });
 
   // Job list hover functionality to show descriptions
   $('.job-list li').hover(function () {
@@ -56,5 +47,4 @@ $(document).ready(function() {
     'z-index': '9999',     // Ensure the line is on top of content
     'left': '0'            // Position the line on the left side
   });
-
 });
