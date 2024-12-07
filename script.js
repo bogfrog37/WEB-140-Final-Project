@@ -36,15 +36,4 @@ $(document).ready(function() {
 
   // Add a blue vertical line to the left side of the body content
   $('body').prepend('<div id="left-line"></div>');  // Add left line
-
-  // Style the left line using jQuery
-  $('#left-line').css({
-    'position': 'fixed',   // Fixed position to keep it on the left side while scrolling
-    'top': '0',            // Start from the top of the page
-    'bottom': '0',         // Extend to the bottom of the page
-    'width': '5px',        // Thickness of the line
-    'background-color': '#005f73', // Line color
-    'z-index': '9999',     // Ensure the line is on top of content
-    'left': '0'            // Position the line on the left side
-  });
 });
