@@ -11,13 +11,10 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center all elements inside */
-  justify-content: center;
-  text-align: center;
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .center-title {
@@ -43,20 +40,23 @@ img {
 .side-nav {
   position: fixed;
   top: 0;
-  left: -250px; /* Sidebar hidden by default */
+  left: -250px; /* Start with the sidebar off-screen */
   width: 250px;
   height: 100%;
-  background-color: #005f73;
-  transition: left 0.3s ease; /* Smooth sliding effect */
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  z-index: 100;
 }
 
 .side-nav a {
-  display: block;
-  padding: 10px;
-  color: white;
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
 }
 
 .side-nav a:hover {
@@ -65,13 +65,13 @@ img {
 
 /* Content area when sidebar is open */
 .content {
-  transition: margin-left 0.3s ease; /* Smooth shift of content */
+  transition: margin-left 0.5s ease; /* Smooth shift of content */
 }
 
 /* Hamburger Button (Under the Title) */
 .hamburger-btn {
   position: absolute;
-  right: 0px; /* Aligns the button to the right */
+  left: 0px; /* Aligns the button to the right */
   top: 1px;
   background-color: transparent;
   border: none;
@@ -83,9 +83,9 @@ img {
 .hamburger-btn span {
   display: block;
   width: 30px;
-  height: 4px;
+  height: 5px;
   background-color: #005f73;
-  margin: 6px auto;
+  margin: 6px 0;
   transition: 0.3s;
 }
 
