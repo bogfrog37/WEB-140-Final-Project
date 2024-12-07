@@ -36,11 +36,11 @@ img {
   margin: auto;
 }
 
-/* Side Navigation Styles */
+/* Sidebar styles */
 .side-nav {
   position: fixed;
   top: 0;
-  left: -250px; /* Start with the sidebar off-screen */
+  left: -250px; /* Sidebar initially off-screen */
   width: 250px;
   height: 100%;
   background-color: #333;
@@ -48,6 +48,10 @@ img {
   transition: 0.5s;
   padding-top: 20px;
   z-index: 100;
+}
+
+.side-nav.open {
+  left: 0; /* When the sidebar is open, it shifts to the left */
 }
 
 .side-nav a {
@@ -66,6 +70,11 @@ img {
 /* Content area when sidebar is open */
 .content {
   transition: margin-left 0.5s ease; /* Smooth shift of content */
+}
+
+/* Content shifted when sidebar is open */
+.content.shifted {
+  margin-left: 250px; /* Shift the content when the sidebar is open */
 }
 
 /* Hamburger Button (Under the Title) */
@@ -93,20 +102,34 @@ img {
   background-color: #0a9396;
 }
 
-
-
+/* Job List Styles */
 .job-list {
   list-style-type: none;
-  padding: 0;}
-  
+  padding: 0;
+}
+
 .job-list li {
   margin-bottom: 10px;
   cursor: pointer;  
-}  
+}
 
-.job description {
+.job-description {
   display: none;
   color: #0a9396;  
 }
 
-p {left: 4px;}
+/* Line style on the left side */
+#left-line {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #005f73;
+  z-index: 9999;
+  left: 0;
+}
+
+/* Paragraph Styling (in case you need to apply adjustments) */
+p {
+  left: 4px;
+}
